@@ -1,0 +1,158 @@
+/* Theme Colors */
+:root {
+    --primary-blue: #003366;
+    --secondary-gold: #D4AF37;
+    --accent-white: #FFFFFF;
+    --light-gray: #F8F9FA;
+    --dark-gray: #343A40;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-gray);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-blue);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand span {
+    color: var(--secondary-gold);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--accent-white) !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-gold) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('../assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.tagline-quote {
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 4px solid var(--secondary-gold);
+    padding-left: 20px;
+}
+
+.btn-gold {
+    background-color: var(--secondary-gold);
+    color: var(--primary-blue);
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #C5A028;
+    transform: scale(1.05);
+    color: var(--primary-blue);
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-gold);
+}
+
+#about .section-title::after {
+    left: 0;
+    transform: none;
+}
+
+/* Facility Cards */
+.facility-card {
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+}
+
+.facility-card h4 {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #001a33 !important;
+}
+
+footer .social-links a:hover {
+    color: var(--secondary-gold) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .carousel-item img {
+        height: 300px;
+    }
+}
